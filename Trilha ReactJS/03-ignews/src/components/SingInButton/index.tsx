@@ -5,9 +5,7 @@ import { signIn, useSession, signOut } from 'next-auth/client'
 
 export function SingInButton () {
     const [session] = useSession()
-
-    console.log(session)
-    
+        
     return session ? (
         <button type="button" className={styles.singInButton} onClick={() => signOut()}>
             <FaGithub color="#04d361" />
